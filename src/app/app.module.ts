@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { MarkAsteriskDirective } from './directives/mark-asterisk.directive';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
@@ -27,7 +26,6 @@ import { UserManagementComponent } from './user-management/user-management.compo
     UserManagementComponent,
     AddEnvironmentComponent,
     AddEmailConfigComponent,
-    MarkAsteriskDirective,
   ],
   imports: [
     BrowserModule,
