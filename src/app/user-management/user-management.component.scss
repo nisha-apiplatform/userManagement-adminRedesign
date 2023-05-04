@@ -1,0 +1,193 @@
+.container {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.row {
+  display: flex;
+}
+
+.toolbar {
+  border: 0;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #dbdbdb;
+  display: inline-block;
+  margin: 20px 10px 20px 0px;
+  height: 69px;
+}
+
+.toolbar-text {
+  font-size: 1.75rem !important;
+  font-weight: 600 !important;
+  position: relative;
+  top: -7px;
+}
+
+.add-button {
+  height: 35px;
+  float: right;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+  border: 0;
+  display: flex;
+  background: #3d3d3e;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 22px;
+}
+button {
+  width: 212px;
+}
+mat-card {
+  background: #f2f2f2;
+  border: 1px solid #d4d4d4;
+  border-radius: 10px;
+  padding-right: 20px;
+}
+
+.verify-icon {
+  color: #45bc31;
+  font-size: 16px;
+  position: relative;
+  vertical-align: middle;
+  top: 4px;
+  padding-left: 3px;
+}
+
+.delete-icon {
+  color: #ff2e2e;
+  font-size: 22px;
+  position: relative;
+  vertical-align: middle;
+  top: 4px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.search-box {
+  background: #d9d9d9;
+  border-radius: 8px;
+  border: 1px solid #a2a2a2;
+  margin: 35px 0px 12px 12px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.85);
+  height: 43px;
+  width: 95%;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+div i {
+  font-size: 20px;
+  margin-left: -30px;
+  position: relative;
+  vertical-align: middle;
+  top: 1px;
+}
+
+input[type="search"] {
+  padding: 10px;
+}
+
+.username-title {
+  font-weight: 600;
+  padding-bottom: 10px;
+  font-size: 1.2rem;
+}
+.username-text {
+  font-weight: 400;
+  font-size: 1.15rem;
+  padding-bottom: 10px;
+}
+
+.username {
+  border-right: 1px solid #e0e0e0;
+  height: 100%;
+}
+mat-list-item {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
+  width: 100%;
+}
+
+.add-env-button {
+  height: 35px;
+  float: right;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+  border: 0;
+  display: flex;
+  background: #3d3d3e;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-env-title {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.div-user-env {
+  padding: 22px 0 20px 20px;
+}
+
+.add-env-button {
+  max-width: 80%;
+  height: 35px;
+  min-width: 20%;
+  float: right;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+  border: 0;
+  display: flex;
+  background: #3d3d3e;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 22px;
+  margin-bottom: 30px;
+}
+table {
+  max-width: 100%;
+  overflow-x: auto;
+  min-width: 60%;
+  width: 100%;
+}
+
+th {
+  background-color: #d9d9d9 !important;
+  font-weight: 600;
+  font-size: 1rem;
+}
+ngx-smart-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: white;
+  padding: 20px;
+}
+
+.maxed {
+  margin-right: 0;
+  margin-left: 0;
+  width: 100%;
+  height: calc(100vh - 150px);
+}
+
+::ng-deep .mat-mdc-dialog-container {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  height: 65% !important;
+  width: 60% !important;
+  transform: translate(-50%, -50%) !important;
+}

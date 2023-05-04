@@ -1,0 +1,92 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <mat-toolbar class="toolbar">
+        <span class="toolbar-text">User Management</span>
+        <button
+          mat-icon-button
+          class="add-button"
+          (click)="addEmailConfigDialog()"
+        >
+          <mat-icon>add</mat-icon>Add
+        </button>
+      </mat-toolbar>
+    </div>
+  </div>
+
+  <mat-card>
+    <div class="row maxed">
+      <div class="col-lg-4 col-md-6 col-sm-4 col-xs-2 username">
+        <input
+          class="search-box"
+          type="search"
+          [(ngModel)]="searchTerm"
+          (input)="searchItems()"
+          placeholder="Enter Text to Filter"
+        />
+        <i class="material-icons">search</i>
+
+        <mat-list>
+          <mat-list-item class="username-title">Username</mat-list-item>
+          <mat-list-item *ngFor="let user of filteredUsers">
+            <mat-radio-button
+              class="username-radio"
+              [checked]="user === selectedUser"
+              (click)="onUserSelected(user)"
+            ></mat-radio-button>
+            <span matLine class="username-text">
+              {{ user }}
+              <mat-icon class="verify-icon">check_circle</mat-icon>
+              <mat-icon
+                class="delete-icon"
+                (click)="deleteItem(user)"
+                style="float: right"
+                >delete</mat-icon
+              >
+            </span>
+          </mat-list-item>
+        </mat-list>
+      </div>
+
+      <div class="col-lg-8 col-md-6 col-sm-8 col-xs-6 div-user-env">
+        <span class="user-env-title">User Environments</span>
+
+        <button mat-icon-button class="add-env-button" (click)="addEnvDialog()">
+          <mat-icon>add</mat-icon>Add Environments
+        </button>
+
+        <table mat-table [dataSource]="dataSource">
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef>Actions</th>
+            <td mat-cell *matCellDef="let element">{{ element.actions }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="environment">
+            <th mat-header-cell *matHeaderCellDef>Environment</th>
+            <td mat-cell *matCellDef="let element">
+              {{ element.environment }}
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="password">
+            <th mat-header-cell *matHeaderCellDef>Password</th>
+            <td mat-cell *matCellDef="let element">{{ element.password }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="role">
+            <th mat-header-cell *matHeaderCellDef>Role</th>
+            <td mat-cell *matCellDef="let element">{{ element.role }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="exclusions">
+            <th mat-header-cell *matHeaderCellDef>Exclusions</th>
+            <td mat-cell *matCellDef="let element">{{ element.exclusions }}</td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+      </div>
+    </div>
+  </mat-card>
+</div>
